@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-j"></i>
+                    <div class="logo-text">Jenro Magbanua</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        
+                    </ul>
+                </nav>
+<br>
+                <!-- Projects Section -->
+                <section id="projects">
+                    <h2>Projects</h2>
+            
+                    <div class="project" onclick="openModal('modal1')">
+                        <img src="project1.jpg" alt="Project 1 Image" class="project-img">
+                        <h3>Weather App</h3>
+                        <p>A web application that provides real-time weather updates based on the user's location or input. Built using HTML, CSS, and JavaScript.</p>
+                    </div>
+            
+                    <div class="project" onclick="openModal('modal2')">
+                        <img src="project2.jpg" alt="Project 2 Image" class="project-img">
+                        <h3>Task Manager</h3>
+                        <p>A simple to-do list application where users can add, edit, and delete tasks to manage daily activities efficiently. Developed using React.js and Node.js.</p>
+                    </div>
+            
+                    <div class="project" onclick="openModal('modal3')">
+                        <img src="project3.jpg" alt="Project 3 Image" class="project-img">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website showcasing my projects, skills, and contact information. Built with HTML, CSS, and JavaScript.</p>
+                    </div>
+                </section>
+
+                <!-- Modal Section -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img src="pic2.jpg" alt="Project 1 Full Image" class="modal-img">
+        <h2>Project Title 1</h2>
+        <p>Details about Project 1...</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img src="project2.jpg" alt="Project 2 Full Image" class="modal-img">
+        <h2>Project Title 2</h2>
+        <p>Details about Project 2...</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <img src="project3.jpg" alt="Project 3 Full Image" class="modal-img">
+        <h2>Project Title 3</h2>
+        <p>Details about Project 3...</p>
+    </div>
+</div>
+
+<script>
+    // Function to open a modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+}
+
+// Function to close a modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+// Close the modal if the user clicks outside of the modal content
+window.onclick = function (event) {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+            modals[i].style.display = 'none';
+        }
+    }
+}
+
+
+</script>
+
